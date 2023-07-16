@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculater</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+  <script src="https://kit.fontawesome.com/72a511df18.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="cal.css">
+
+
+
+</head>
+
+<body>
+
+
+  <div class="cal">
+    <input class="input" type="text" maxlength="10"></input>
+    <div class="rows">
+      <button class="button">.</button>
+      <button class="button">00</button>
+      <button class="button">AC</button>
+      <button class="button">%</button>
+    </div>
+    <div class="rows">
+      <button class="button">7</button>
+      <button class="button">8</button>
+      <button class="button">9</button>
+      <button class="button">/</button>
+    </div>
+    <div class="rows">
+      <button class="button">4</button>
+      <button class="button">5</button>
+      <button class="button">6</button>
+      <button class="button">*</button>
+    </div>
+    <div class="rows">
+      <button class="button">1</button>
+      <button class="button">2</button>
+      <button class="button">3</button>
+      <button class="button">-</button>
+    </div>
+    <div class="rows">
+      <button class="button long">0</button>
+
+      <button class="button">=</button>
+      <button class="button">+</button>
+    </div>
+  </div>
+
+
+  <!--<script src="cal.js"></script> -->
+  <script>
+    let string = "";
+    let buttons = document.querySelectorAll('.button');
+    Array.from(buttons).forEach((button) => {
+      button.addEventListener('click', (e) => {
+        if (e.target.innerHTML == '=') {
+          string = eval(string);
+          document.querySelector('input').value = string;
+        }
+        else if (e.target.innerHTML == 'AC') {
+          string = ""
+          document.querySelector('input').value = string
+        }
+        else {
+          console.log(e.target)
+          string = string + e.target.innerHTML;
+          document.querySelector('input').value = string
+        }
+
+
+      })
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Orbitron&display=swap');
+
+    body
+    {
+      background: rgb(16,189,243);
+      
+     
+    }
+
+
+    @keyframes sha {
+    0% {
+        box-shadow: 50px 50px 15px rgba(0, 0, 0, 0.60);
+    }
+    50% {
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.60);
+    }
+    100% {
+        box-shadow: 50px 50px 15px rgba(0, 0, 0, 0.60);
+    }
+}
+
+
+    .cal {
+
+      border-radius: 20px;
+      animation: sha 2s linear infinite;
+     width: 15rem;
+
+      background-color: rgba(1, 1, 1, 0.893);
+      text-align: center;
+      padding: 20px;
+      margin: auto;
+      margin-top:50px ;
+      
+      
+      
+
+
+    }
+
+   
+
+    .input {
+      background-color: rgba(35, 182, 69, 0.617);
+      width: 97%;
+      font-size: 50px;
+      margin: 20px 0px;
+      padding: 0px 15px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+
+    button {
+      color: #fff;
+      margin: 2px;
+      font-family: 'Orbitron', sans-serif;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      font-size:S 15px;
+      background-color: rgba(255, 255, 255, 0.283);
+    }
+
+    .long {
+      width: 85px;
+      border-radius: 50px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
